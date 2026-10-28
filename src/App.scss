@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.gate,
+.application {
+  min-height: 100vh;
+}
+
+.gate {
+  position: relative;
+  overflow: hidden;
+}
+
+.gate__image {
+  position: absolute;
+  inset: 0 0 0 48%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #172522 0%,
+      rgba(23, 37, 34, 0.78) 35%,
+      rgba(23, 37, 34, 0.1) 100%
+    ),
+    url("./assets/images/Rein_rose_mot_horisont.png") center / cover;
+
+  opacity: 0.75;
+}
+
+.gate__content {
+  position: relative;
+  z-index: 1;
+}
+
+.gate__title,
+.application__title,
+.application h2,
+.application h3 {
+  font-family: 'Fraunces', serif;
+}
+
+.application {
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.application nav a,
+.application nav button,
+.gate header,
+.gate footer,
+.gate label,
+.gate button,
+.application section > p,
+.application section span {
+  font-family: 'DM Mono', monospace;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 800ms ease, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal][data-delay='1'] {
+  transition-delay: 120ms;
+}
+
+[data-reveal][data-delay='2'] {
+  transition-delay: 240ms;
+}
+
+[data-reveal][data-delay='3'] {
+  transition-delay: 360ms;
+}
+
+[data-reveal='image'] {
+  transform: translateY(2rem) scale(1.06);
+  transition-property: opacity, transform;
+}
+
+[data-reveal='image'].is-visible {
+  transform: translateY(0) scale(1);
+}
+
+.photo-interlude {
+  display: grid;
+  gap: 3rem;
+  padding: 3rem 0 8rem;
+}
+
+.background-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(14rem, 0.8fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  align-items: center;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 4rem 0 0 calc(50% - 50vw);
+  padding: clamp(4rem, 10vw, 9rem) max(1.5rem, calc((100vw - 80rem) / 2));
+  overflow: hidden;
+  background: #172522;
+}
+
+.background-story__copy {
+  padding-left: clamp(1rem, 4vw, 5rem);
+}
+
+.background-story__figure {
+  position: relative;
+  width: min(100%, 22rem);
+  margin-right: clamp(0.75rem, 3vw, 3rem);
+  justify-self: center;
+  background: transparent;
+}
+
+.background-story__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: saturate(0.78) contrast(1.05);
+  transition: filter 500ms ease;
+}
+
+.background-story__figure:hover img {
+  filter: saturate(1) contrast(1.05);
+}
+
+.background-story__details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 34rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(203, 214, 205, 0.35);
+}
+
+.background-story__details > div {
+  padding: 1rem 1rem 0 0;
+}
+
+.background-story__details span,
+.background-story__details p {
+  color: #aebfb4;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.background-story__details strong {
+  display: block;
+  margin-top: 1.25rem;
+  color: #f4f1e8;
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.background-story__details p {
+  margin-top: 0.45rem;
+  text-transform: none;
+}
+
+.application-bridge {
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(2rem, 9vw, 9rem);
+  padding: clamp(5rem, 11vw, 10rem) clamp(1rem, 4vw, 5rem);
+  border-bottom: 1px solid #c5cbc2;
+}
+
+.application-bridge__lead {
+  align-self: start;
+}
+
+.application-bridge__text {
+  max-width: 46rem;
+}
+
+.application-bridge__text p + p {
+  margin-top: 2rem;
+}
+
+.photo-interlude__intro {
+  max-width: 22rem;
+}
+
+.photo-interlude__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.photo-card {
+  overflow: hidden;
+  margin: 0;
+  background: #d2dfb9;
+  aspect-ratio: 4 / 5;
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.82);
+  transition: filter 500ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.photo-card:hover img {
+  filter: saturate(1);
+  transform: scale(1.05);
+}
+
+.photo-card--1 {
+  grid-column: 1 / span 3;
+  margin-top: 4rem;
+}
+
+.photo-card--2 {
+  grid-column: 4 / span 3;
+}
+
+.photo-card--3 {
+  grid-column: 7 / span 3;
+  margin-top: 8rem;
+}
+
+.photo-card--4 {
+  grid-column: 10 / span 3;
+  margin-top: 2rem;
+}
+
+[data-reveal='pop'] {
+  opacity: 0;
+  transform: translateY(5rem) scale(0.88) rotate(3deg);
+  transition: opacity 650ms ease, transform 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-reveal='pop'].is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal='image'] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  [data-reveal='pop'] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .application-bridge {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .background-story {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .background-story__copy {
+    padding-left: 0;
+  }
+
+  .background-story__figure {
+    width: min(100%, 20rem);
+    margin-right: 0;
+    justify-self: start;
+  }
+
+  .background-story__details {
+    gap: 0.75rem;
+  }
+
+  .photo-interlude {
+    padding-bottom: 5rem;
+  }
+
+  .photo-interlude__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo-card--1,
+  .photo-card--2,
+  .photo-card--3,
+  .photo-card--4 {
+    grid-column: auto;
+    margin-top: 0;
+  }
+
+  .photo-card--2,
+  .photo-card--4 {
+    margin-top: 2rem;
+  }
+
+  .gate__image {
+    inset: 45% 0 0;
+    background: linear-gradient(0deg, #172522 0%, rgba(23, 37, 34, 0.78) 65%, rgba(23, 37, 34, 0.1) 100%), url('https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=900&q=85') center / cover;
+  }
+}
