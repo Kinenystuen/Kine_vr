@@ -78,11 +78,25 @@ function AccessGate({ onUnlock }) {
                 title={showPassword ? "Skjul passord" : "Vis passord"}
               >
                 {showPassword ? (
-                  <svg aria-hidden="true" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+                  <svg
+                    aria-hidden="true"
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                  >
                     <path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.2A10.7 10.7 0 0 1 12 5c5.2 0 8.6 4.7 9.5 7-.3.8-1 1.9-2 2.9M6.2 6.2C4.1 7.6 2.8 9.7 2.5 12c.5 1.3 1.8 3.4 4.7 5.2A10.3 10.3 0 0 0 12 19c1.3 0 2.5-.3 3.6-.7" />
                   </svg>
                 ) : (
-                  <svg aria-hidden="true" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+                  <svg
+                    aria-hidden="true"
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                  >
                     <path d="M2.5 12S6 5 12 5s9.5 7 9.5 7S18 19 12 19 2.5 12 2.5 12Z" />
                     <circle cx="12" cy="12" r="2.5" />
                   </svg>
@@ -198,14 +212,10 @@ function ApplicationPage({ onLogout }) {
               EN DIGITAL SØKNAD / Norsk Villreinsenter
             </p>
             <h1 className="application__title max-w-4xl text-6xl font-medium leading-[0.9] tracking-[-0.06em] sm:text-8xl lg:text-[9.5rem]">
-              Webutvikler 
+              Webutvikler
             </h1>
           </div>
-          <div>
-            <p className="max-w-sm pb-2 text-lg leading-8 text-[#52645b]">
-              {/* Jeg er en friluftsperson med stor interesse for natur og dyreliv. Hva kan være bedre enn å bruke kunnskapen og kreativiteten min til å formidle kunnskap om villrein og villreinfjellet? */}
-            </p>
-          </div>
+          <div></div>
         </div>
 
         {/* Søknad section */}
@@ -250,10 +260,16 @@ function ApplicationPage({ onLogout }) {
               landskapsplanlegging og landskapsarkitektur. Jeg kommer fra
               Folldal, hvor naturen og fjellet har vært en stor del av
               oppveksten min. Jeg har alltid likt å være kreativ og finne
-              løsninger, noe som har påvirket både karrierevalgene mine og veien min inn i webutvikling.
+              løsninger, noe som har påvirket både karrierevalgene mine og veien
+              min inn i webutvikling.
             </p>
             <p className="mt-4 max-w-xl text-lg leading-8 text-[#52645b]">
-              Det er nettopp denne kombinasjonen av faglig bredde og interesse for natur som gjør muligheten til å videreutvikle villrein.no og Villreinskolen så spennende. Jeg ønsker å bruke det jeg kan innen webutvikling til å formidle et tema jeg selv har stor interesse for, på en måte som gjør kunnskapen tilgjengelig og engasjerende for flere.
+              Det er nettopp denne kombinasjonen av faglig bredde og interesse
+              for natur som gjør muligheten til å videreutvikle villrein.no og
+              Villreinskolen så spennende. Jeg ønsker å bruke det jeg kan innen
+              webutvikling til å formidle et tema jeg selv har stor interesse
+              for, på en måte som gjør kunnskapen tilgjengelig og engasjerende
+              for flere.
             </p>
           </div>
         </section>
@@ -280,7 +296,7 @@ function ApplicationPage({ onLogout }) {
                 alt: "Utsikt over fjelllandskap og tjern",
               },
               {
-                      src: vinterOgReinImage,
+                src: vinterOgReinImage,
                 alt: "Vinter og rein",
               },
             ].map(({ src, alt }, index) => (
@@ -312,10 +328,10 @@ function ApplicationPage({ onLogout }) {
             <p className="mt-8 max-w-xl text-lg leading-8 text-[#cbd6cd]">
               Jeg har en bachelor i landskapsplanlegging med landskapsarkitektur
               og en høyere fagskolegrad i front-end utvikling. For denne
-              stillingen er det klart at utdanningen min innen utvikling er viktigste
-              elementet, men bacheloren har gitt meg en faglig bakgrunn som jeg
-              tror kan komme godt med i møte med temaene dere i Norsk
-              villreinsenter jobber med.
+              stillingen er det klart at utdanningen min innen utvikling er
+              viktigste elementet, men bacheloren har gitt meg en faglig
+              bakgrunn som jeg tror kan komme godt med i møte med temaene dere i
+              Norsk villreinsenter jobber med.
             </p>
             <p className="mt-4 max-w-xl text-lg leading-8 text-[#cbd6cd]">
               Gjennom front-end utdanningen har jeg lært meg å kode og utvikle
@@ -366,10 +382,16 @@ function ApplicationPage({ onLogout }) {
           </div>
           <div className="application-bridge__text text-lg leading-8 text-[#52645b]">
             <p>
-              Noe av det jeg liker best med webutvikling er at det sjelden finnes bare én måte å løse en oppgave på. Jeg liker å starte med en idé eller et behov, utforske ulike løsninger og kombinere design og kode til noe som både fungerer godt og ser bra ut.
+              Noe av det jeg liker best med webutvikling er at det sjelden
+              finnes bare én måte å løse en oppgave på. Jeg liker å starte med
+              en idé eller et behov, utforske ulike løsninger og kombinere
+              design og kode til noe som både fungerer godt og ser bra ut.
             </p>
             <p>
-              Underveis er jeg opptatt av hvordan løsningen faktisk fungerer for brukeren. Responsivt design og universell utforming er derfor naturlige deler av prosessen, enten jeg jobber med struktur, design eller selve utviklingen.
+              Underveis er jeg opptatt av hvordan løsningen faktisk fungerer for
+              brukeren. Responsivt design og universell utforming er derfor
+              naturlige deler av prosessen, enten jeg jobber med struktur,
+              design eller selve utviklingen.
             </p>
           </div>
         </section>
@@ -396,8 +418,12 @@ function ApplicationPage({ onLogout }) {
                 data-delay={index + 1}
                 key={title}
               >
-                <span className="improvement-card__index text-sm text-[#6b825f]">0{index + 1}</span>
-                <h3 className="mt-4 text-2xl tracking-[-0.03em] sm:mt-16">{title}</h3>
+                <span className="improvement-card__index text-sm text-[#6b825f]">
+                  0{index + 1}
+                </span>
+                <h3 className="mt-4 text-2xl tracking-[-0.03em] sm:mt-16">
+                  {title}
+                </h3>
                 <p className="mt-5 max-w-xs leading-7 text-[#52645b]">
                   {description}
                 </p>
