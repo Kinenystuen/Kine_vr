@@ -8,7 +8,7 @@ import owlImage from "./assets/images/DSC05096.jpg";
 import mountainImage from "./assets/images/DSC00791.JPEG";
 import reindeerIllustration from "./assets/images/image.png";
 import lakeImage from "./assets/images/IMG_3383.JPEG";
-import cityImage from "./assets/images/57154587_470490330355836_1350036447381422080_n.jpg";
+import vinterOgReinImage from "./assets/images/57154587_470490330355836_1350036447381422080_n.jpg";
 
 function readAccessState() {
   try {
@@ -136,7 +136,7 @@ function ApplicationPage({ onLogout }) {
     },
     {
       label: "Portfolio",
-      detail: "Se porteføljen",
+      detail: "Se porteføljen min",
       href: "https://kineon.no",
     },
     {
@@ -195,10 +195,10 @@ function ApplicationPage({ onLogout }) {
         >
           <div>
             <p className="mb-8 text-xs font-bold uppercase tracking-[0.28em] text-[#6b825f]">
-              EN DIGITAL SØKNAD / WEBUTVIKLER
+              EN DIGITAL SØKNAD / Norsk Villreinsenter
             </p>
             <h1 className="application__title max-w-4xl text-6xl font-medium leading-[0.9] tracking-[-0.06em] sm:text-8xl lg:text-[9.5rem]">
-              Norsk Villreinsenter
+              Webutvikler 
             </h1>
           </div>
           <div>
@@ -250,8 +250,7 @@ function ApplicationPage({ onLogout }) {
               landskapsplanlegging og landskapsarkitektur. Jeg kommer fra
               Folldal, hvor naturen og fjellet har vært en stor del av
               oppveksten min. Jeg har alltid likt å være kreativ og finne
-              løsninger, noe som har satt sitt preg på mine karrierevalg og inn
-              i webutvikling verdenen.
+              løsninger, noe som har påvirket både karrierevalgene mine og veien min inn i webutvikling.
             </p>
             <p className="mt-4 max-w-xl text-lg leading-8 text-[#52645b]">
               Det er nettopp denne kombinasjonen av faglig bredde og interesse for natur som gjør muligheten til å videreutvikle villrein.no og Villreinskolen så spennende. Jeg ønsker å bruke det jeg kan innen webutvikling til å formidle et tema jeg selv har stor interesse for, på en måte som gjør kunnskapen tilgjengelig og engasjerende for flere.
@@ -281,8 +280,8 @@ function ApplicationPage({ onLogout }) {
                 alt: "Utsikt over fjelllandskap og tjern",
               },
               {
-                src: cityImage,
-                alt: "Kine på ferie i Wien",
+                      src: vinterOgReinImage,
+                alt: "Vinter og rein",
               },
             ].map(({ src, alt }, index) => (
               <figure
@@ -313,7 +312,7 @@ function ApplicationPage({ onLogout }) {
             <p className="mt-8 max-w-xl text-lg leading-8 text-[#cbd6cd]">
               Jeg har en bachelor i landskapsplanlegging med landskapsarkitektur
               og en høyere fagskolegrad i front-end utvikling. For denne
-              stillingen er det klart at utvikler utdanningen min er viktigste
+              stillingen er det klart at utdanningen min innen utvikling er viktigste
               elementet, men bacheloren har gitt meg en faglig bakgrunn som jeg
               tror kan komme godt med i møte med temaene dere i Norsk
               villreinsenter jobber med.
@@ -328,12 +327,12 @@ function ApplicationPage({ onLogout }) {
 
             <div className="background-story__details">
               <div>
-                <span>01</span>
+                {/* <span>01</span> */}
                 <strong>Front-end utvikling</strong>
                 <p>Noroff / fagskolegrad</p>
               </div>
               <div>
-                <span>02</span>
+                {/* <span>02</span> */}
                 <strong>Landskapsplanlegging med landskapsarkitektur</strong>
                 <p>HVL / bachelorgrad</p>
               </div>
@@ -392,13 +391,13 @@ function ApplicationPage({ onLogout }) {
           <div className="grid border-t border-[#c5cbc2] sm:grid-cols-3">
             {improvements.map(({ title, description }, index) => (
               <article
-                className="border-b border-[#c5cbc2] py-8 sm:border-b-0 sm:border-r sm:px-8 sm:first:pl-0 sm:last:border-r-0"
+                className="improvement-card border-b border-[#c5cbc2] py-8 sm:border-b-0 sm:border-r sm:px-8 sm:first:pl-0 sm:last:border-r-0"
                 data-reveal="fade-up"
                 data-delay={index + 1}
                 key={title}
               >
-                <span className="text-sm text-[#6b825f]">0{index + 1}</span>
-                <h3 className="mt-16 text-2xl tracking-[-0.03em]">{title}</h3>
+                <span className="improvement-card__index text-sm text-[#6b825f]">0{index + 1}</span>
+                <h3 className="mt-4 text-2xl tracking-[-0.03em] sm:mt-16">{title}</h3>
                 <p className="mt-5 max-w-xs leading-7 text-[#52645b]">
                   {description}
                 </p>
