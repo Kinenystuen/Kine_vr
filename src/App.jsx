@@ -9,6 +9,7 @@ import mountainImage from "./assets/images/DSC00791.JPEG";
 import reindeerIllustration from "./assets/images/image.png";
 import lakeImage from "./assets/images/IMG_3383.JPEG";
 import vinterOgReinImage from "./assets/images/57154587_470490330355836_1350036447381422080_n.jpg";
+import cvFile from "./assets/files/CV_Kine_Odden_Nystuen_26.pdf";
 
 function readAccessState() {
   try {
@@ -146,7 +147,7 @@ function ApplicationPage({ onLogout }) {
     {
       label: "CV",
       detail: "Last ned CV",
-      href: "src/assets/files/CV_Kine_Odden_Nystuen_26.pdf",
+      href: cvFile,
     },
     {
       label: "Portfolio",
