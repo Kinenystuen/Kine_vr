@@ -330,6 +330,13 @@
 
   .gate__image {
     inset: 45% 0 0;
-    background: linear-gradient(0deg, #172522 0%, rgba(23, 37, 34, 0.78) 65%, rgba(23, 37, 34, 0.1) 100%), url("./assets/images/Rein_rose_mot_horisont.png") center / cover;
+    background:
+      linear-gradient(
+        180deg,
+        #172522 0%,
+        rgba(23, 37, 34, 0.78) 65%,
+        rgba(23, 37, 34, 0.1) 100%
+      ),
+      url("./assets/images/Rein_rose_mot_horisont.png") center / cover;
   }
 }
